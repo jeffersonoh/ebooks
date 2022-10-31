@@ -1,4 +1,5 @@
-package br.com.agilemed.model.exam;
+package com.example.demospringjwt.domain.user;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,11 +12,14 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Exam implements Serializable {
+public class Users implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     private Long id;
     private String name;
-    private String description;
+    private String userName;
+    private String password;
+    private String role;
 }
